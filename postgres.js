@@ -1,4 +1,5 @@
-// psql -U postgres -p 5432 -h 127.0.0.1 library < postgres_localhost-2021_04_24_11_59_09-dump.sql
+// Import: psql -U postgres -p 5432 -h 127.0.0.1 library < library.sql
+// Export: pg_dump -U postgres -p 5432 -h 127.0.0.1 library > library.sql
 
 const { Client } = require('pg');
 const { geradorNome } = require('gerador-nome');
@@ -101,9 +102,11 @@ async function popularUser(total) {
         await library.query({
             text: 'INSERT INTO public."user"(email, name) VALUES($1, $2)',
             values: [email, name]
-        }, (error, response) => {
+        }, (error, _) => {
             if (error) {
-                console.log(error.stack);
+                console.log(`[user] Error in the insertion`);
+            } else {
+                console.log(`[user] Inserted`);
             }
         });
         i++;
@@ -115,9 +118,11 @@ async function popularAuthor() {
         await library.query({
             text: 'INSERT INTO public."author"(name) VALUES($1)',
             values: [AUTHORS[i]]
-        }, (error, response) => {
+        }, (error, _) => {
             if (error) {
-                console.log(error.stack);
+                console.log(`[author] Error in the insertion`);
+            } else {
+                console.log(`[author] Inserted`);
             }
         });
     }
@@ -128,9 +133,11 @@ async function popularPublishingHouse() {
         await library.query({
             text: 'INSERT INTO public."publisher"(company_name, cnpj) VALUES($1, $2)',
             values: [PUBLISHING_HOUSES[i].company_name, PUBLISHING_HOUSES[i].cnpj]
-        }, (error, response) => {
+        }, (error, _) => {
             if (error) {
-                console.log(error.stack);
+                console.log(`[publisher] Error in the insertion`);
+            } else {
+                console.log(`[publisher] Inserted`);
             }
         });
     }
@@ -141,9 +148,11 @@ async function popularTag() {
         await library.query({
             text: 'INSERT INTO public."tag"(name) VALUES($1)',
             values: [TAGS[i]]
-        }, (error, response) => {
+        }, (error, _) => {
             if (error) {
-                console.log(error.stack);
+                console.log(`[tag] Error in the insertion`);
+            } else {
+                console.log(`[tag] Inserted`);
             }
         });
     }
@@ -154,9 +163,11 @@ async function popularCategory() {
         await library.query({
             text: 'INSERT INTO public."category"(name) VALUES($1)',
             values: [CATEGORIES[i]]
-        }, (error, response) => {
+        }, (error, _) => {
             if (error) {
-                console.log(error.stack);
+                console.log(`[category] Error in the insertion`);
+            } else {
+                console.log(`[category] Inserted`);
             }
         });
     }
@@ -201,9 +212,11 @@ async function popularBook(total) {
                                                     category_id,
                                                     publisher_id
                                                 ]
-                                            }, (e4, r4) => {
+                                            }, (e4, _) => {
                                                 if (e4) {
-                                                    console.log(e4.stack);
+                                                    console.log(`[book] Error in the insertion`);
+                                                } else {
+                                                    console.log(`[book] Inserted`);
                                                 }
                                             });
                                         }
@@ -218,7 +231,7 @@ async function popularBook(total) {
     }
 }
 
-async function popularBorrow(total) {
+async function popularBorrow() {
     await library.query('SELECT COUNT(*) AS len FROM public."book"', (e1, r1) => {
         if (e1) {
             console.log(e1.stack);
@@ -245,9 +258,11 @@ async function popularBorrow(total) {
                                                 generateDate(2018, 2018),
                                                 generateDate(2019, 2019)
                                             ]
-                                        }, (e4, r4) => {
+                                        }, (e4, _) => {
                                             if (e4) {
-                                                console.log(e4.stack);
+                                                console.log(`[borrow] Error in the insertion`);
+                                            } else {
+                                                console.log(`[borrow] Inserted`);
                                             }
                                         });
                                     }
@@ -283,7 +298,9 @@ async function popularBookTag(total) {
                                     ]
                                 }, (e3, _) => {
                                     if (e3) {
-                                        console.log(e3.stack);
+                                        console.log(`[book_tag] Error in the insertion`);
+                                    } else {
+                                        console.log(`[book_tag] Inserted`);
                                     }
                                 });
                             }
@@ -302,10 +319,9 @@ async function main() {
     await popularPublishingHouse();
     await popularTag();
     await popularCategory();
-    await popularBook(500000);
+    await popularBook(50000);
     await popularBookTag(500);
     await popularBorrow();
-    console.log('Completed process');
 }
 
 main();

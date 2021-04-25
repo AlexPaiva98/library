@@ -5,8 +5,6 @@
 -- Dumped from database version 12.6 (Ubuntu 12.6-0ubuntu0.20.04.1)
 -- Dumped by pg_dump version 12.6 (Ubuntu 12.6-0ubuntu0.20.04.1)
 
--- Started on 2021-04-24 17:39:23 -03
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
@@ -23,7 +21,6 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 202 (class 1259 OID 17622)
 -- Name: author; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -36,7 +33,6 @@ CREATE TABLE public.author (
 ALTER TABLE public.author OWNER TO postgres;
 
 --
--- TOC entry 203 (class 1259 OID 17628)
 -- Name: Author_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -51,8 +47,6 @@ CREATE SEQUENCE public."Author_id_seq"
 ALTER TABLE public."Author_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 3068 (class 0 OID 0)
--- Dependencies: 203
 -- Name: Author_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -60,7 +54,6 @@ ALTER SEQUENCE public."Author_id_seq" OWNED BY public.author.id;
 
 
 --
--- TOC entry 204 (class 1259 OID 17630)
 -- Name: book; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -81,7 +74,6 @@ CREATE TABLE public.book (
 ALTER TABLE public.book OWNER TO postgres;
 
 --
--- TOC entry 205 (class 1259 OID 17637)
 -- Name: Book_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -97,8 +89,6 @@ CREATE SEQUENCE public."Book_id_seq"
 ALTER TABLE public."Book_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 3069 (class 0 OID 0)
--- Dependencies: 205
 -- Name: Book_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -106,7 +96,6 @@ ALTER SEQUENCE public."Book_id_seq" OWNED BY public.book.id;
 
 
 --
--- TOC entry 206 (class 1259 OID 17639)
 -- Name: book_tag; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -120,7 +109,6 @@ CREATE TABLE public.book_tag (
 ALTER TABLE public.book_tag OWNER TO postgres;
 
 --
--- TOC entry 207 (class 1259 OID 17642)
 -- Name: Book_tag_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -136,8 +124,6 @@ CREATE SEQUENCE public."Book_tag_id_seq"
 ALTER TABLE public."Book_tag_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 3070 (class 0 OID 0)
--- Dependencies: 207
 -- Name: Book_tag_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -145,7 +131,6 @@ ALTER SEQUENCE public."Book_tag_id_seq" OWNED BY public.book_tag.id;
 
 
 --
--- TOC entry 208 (class 1259 OID 17644)
 -- Name: borrow; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -161,7 +146,6 @@ CREATE TABLE public.borrow (
 ALTER TABLE public.borrow OWNER TO postgres;
 
 --
--- TOC entry 209 (class 1259 OID 17647)
 -- Name: Borrow_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -177,8 +161,6 @@ CREATE SEQUENCE public."Borrow_id_seq"
 ALTER TABLE public."Borrow_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 3071 (class 0 OID 0)
--- Dependencies: 209
 -- Name: Borrow_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -186,7 +168,6 @@ ALTER SEQUENCE public."Borrow_id_seq" OWNED BY public.borrow.id;
 
 
 --
--- TOC entry 210 (class 1259 OID 17649)
 -- Name: category; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -199,7 +180,6 @@ CREATE TABLE public.category (
 ALTER TABLE public.category OWNER TO postgres;
 
 --
--- TOC entry 211 (class 1259 OID 17655)
 -- Name: Category_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -214,8 +194,6 @@ CREATE SEQUENCE public."Category_id_seq"
 ALTER TABLE public."Category_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 3072 (class 0 OID 0)
--- Dependencies: 211
 -- Name: Category_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -223,7 +201,6 @@ ALTER SEQUENCE public."Category_id_seq" OWNED BY public.category.id;
 
 
 --
--- TOC entry 212 (class 1259 OID 17657)
 -- Name: publisher; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -237,7 +214,6 @@ CREATE TABLE public.publisher (
 ALTER TABLE public.publisher OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1259 OID 17663)
 -- Name: Publishing_house_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -253,8 +229,6 @@ CREATE SEQUENCE public."Publishing_house_id_seq"
 ALTER TABLE public."Publishing_house_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 3073 (class 0 OID 0)
--- Dependencies: 213
 -- Name: Publishing_house_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -262,7 +236,6 @@ ALTER SEQUENCE public."Publishing_house_id_seq" OWNED BY public.publisher.id;
 
 
 --
--- TOC entry 214 (class 1259 OID 17665)
 -- Name: tag; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -275,7 +248,6 @@ CREATE TABLE public.tag (
 ALTER TABLE public.tag OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 17671)
 -- Name: Tag_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -291,8 +263,6 @@ CREATE SEQUENCE public."Tag_id_seq"
 ALTER TABLE public."Tag_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 3074 (class 0 OID 0)
--- Dependencies: 215
 -- Name: Tag_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -300,7 +270,6 @@ ALTER SEQUENCE public."Tag_id_seq" OWNED BY public.tag.id;
 
 
 --
--- TOC entry 216 (class 1259 OID 17673)
 -- Name: user; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -314,7 +283,6 @@ CREATE TABLE public."user" (
 ALTER TABLE public."user" OWNER TO postgres;
 
 --
--- TOC entry 217 (class 1259 OID 17679)
 -- Name: User_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -329,8 +297,6 @@ CREATE SEQUENCE public."User_id_seq"
 ALTER TABLE public."User_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 3075 (class 0 OID 0)
--- Dependencies: 217
 -- Name: User_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -338,7 +304,6 @@ ALTER SEQUENCE public."User_id_seq" OWNED BY public."user".id;
 
 
 --
--- TOC entry 2882 (class 2604 OID 17681)
 -- Name: author id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -346,7 +311,6 @@ ALTER TABLE ONLY public.author ALTER COLUMN id SET DEFAULT nextval('public."Auth
 
 
 --
--- TOC entry 2884 (class 2604 OID 17682)
 -- Name: book id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -354,7 +318,6 @@ ALTER TABLE ONLY public.book ALTER COLUMN id SET DEFAULT nextval('public."Book_i
 
 
 --
--- TOC entry 2885 (class 2604 OID 17683)
 -- Name: book_tag id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -362,7 +325,6 @@ ALTER TABLE ONLY public.book_tag ALTER COLUMN id SET DEFAULT nextval('public."Bo
 
 
 --
--- TOC entry 2886 (class 2604 OID 17684)
 -- Name: borrow id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -370,7 +332,6 @@ ALTER TABLE ONLY public.borrow ALTER COLUMN id SET DEFAULT nextval('public."Borr
 
 
 --
--- TOC entry 2887 (class 2604 OID 17685)
 -- Name: category id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -378,7 +339,6 @@ ALTER TABLE ONLY public.category ALTER COLUMN id SET DEFAULT nextval('public."Ca
 
 
 --
--- TOC entry 2888 (class 2604 OID 17686)
 -- Name: publisher id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -386,7 +346,6 @@ ALTER TABLE ONLY public.publisher ALTER COLUMN id SET DEFAULT nextval('public."P
 
 
 --
--- TOC entry 2889 (class 2604 OID 17687)
 -- Name: tag id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -394,7 +353,6 @@ ALTER TABLE ONLY public.tag ALTER COLUMN id SET DEFAULT nextval('public."Tag_id_
 
 
 --
--- TOC entry 2890 (class 2604 OID 17688)
 -- Name: user id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -402,122 +360,70 @@ ALTER TABLE ONLY public."user" ALTER COLUMN id SET DEFAULT nextval('public."User
 
 
 --
--- TOC entry 3047 (class 0 OID 17622)
--- Dependencies: 202
 -- Data for Name: author; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.author (id, name) FROM stdin;
-48	José Saramago
-49	Clarice Lispector
-50	Edgar Allan Poe
-51	Fiódor Dostoiévski
-52	William Shakespeare
-53	Marcel Proust
-54	Miguel de Cervantes
-55	Gabriel García Márquez
-56	Franz Kafka
-57	Jorge Luis Borges
 \.
 
 
 --
--- TOC entry 3049 (class 0 OID 17630)
--- Dependencies: 204
 -- Data for Name: book; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.book (id, isbn, title, edition, qtd_pages, year_publication, available, author_id, category_id, publisher_id) FROM stdin;
-6	344-1-8588-6050-7	Nada além de  Marvin	2	940	2016	f	57	20	12
 \.
 
 
 --
--- TOC entry 3051 (class 0 OID 17639)
--- Dependencies: 206
 -- Data for Name: book_tag; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.book_tag (id, book_id, tag_id) FROM stdin;
-2	6	11
 \.
 
 
 --
--- TOC entry 3053 (class 0 OID 17644)
--- Dependencies: 208
 -- Data for Name: borrow; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.borrow (id, book_id, user_id, initial_date, final_date) FROM stdin;
-4	6	4022	2001-05-02	2011-08-29
 \.
 
 
 --
--- TOC entry 3055 (class 0 OID 17649)
--- Dependencies: 210
 -- Data for Name: category; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.category (id, name) FROM stdin;
-12	Romance
-13	Drama
-14	Novela
-15	Conto
-16	Crônica
-17	Ensaio
-18	Poesia
-19	Memórias
-20	Biografia
-21	Aventura
 \.
 
 
 --
--- TOC entry 3057 (class 0 OID 17657)
--- Dependencies: 212
 -- Data for Name: publisher; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.publisher (id, company_name, cnpj) FROM stdin;
-8	Companhia da Letras	55.789.390/0008-99
-9	Aleph	53.523.551/0001-04
-10	Suma	90.375.049/0001-11
-11	Intrínseca	05.660.045/0001-06
-12	Rocco	42.444.703/0004-00
 \.
 
 
 --
--- TOC entry 3059 (class 0 OID 17665)
--- Dependencies: 214
 -- Data for Name: tag; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.tag (id, name) FROM stdin;
-7	superação
-8	motivação
-9	aprendizado
-10	conduta
-11	viagem
 \.
 
 
 --
--- TOC entry 3061 (class 0 OID 17673)
--- Dependencies: 216
 -- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public."user" (id, email, name) FROM stdin;
-4022	Maria_Cléo@outlook.com	Edith de Jacinto
 \.
 
 
 --
--- TOC entry 3076 (class 0 OID 0)
--- Dependencies: 203
 -- Name: Author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -525,8 +431,6 @@ SELECT pg_catalog.setval('public."Author_id_seq"', 57, true);
 
 
 --
--- TOC entry 3077 (class 0 OID 0)
--- Dependencies: 205
 -- Name: Book_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -534,8 +438,6 @@ SELECT pg_catalog.setval('public."Book_id_seq"', 6, true);
 
 
 --
--- TOC entry 3078 (class 0 OID 0)
--- Dependencies: 207
 -- Name: Book_tag_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -543,8 +445,6 @@ SELECT pg_catalog.setval('public."Book_tag_id_seq"', 2, true);
 
 
 --
--- TOC entry 3079 (class 0 OID 0)
--- Dependencies: 209
 -- Name: Borrow_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -552,8 +452,6 @@ SELECT pg_catalog.setval('public."Borrow_id_seq"', 4, true);
 
 
 --
--- TOC entry 3080 (class 0 OID 0)
--- Dependencies: 211
 -- Name: Category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -561,8 +459,6 @@ SELECT pg_catalog.setval('public."Category_id_seq"', 21, true);
 
 
 --
--- TOC entry 3081 (class 0 OID 0)
--- Dependencies: 213
 -- Name: Publishing_house_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -570,8 +466,6 @@ SELECT pg_catalog.setval('public."Publishing_house_id_seq"', 12, true);
 
 
 --
--- TOC entry 3082 (class 0 OID 0)
--- Dependencies: 215
 -- Name: Tag_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -579,8 +473,6 @@ SELECT pg_catalog.setval('public."Tag_id_seq"', 11, true);
 
 
 --
--- TOC entry 3083 (class 0 OID 0)
--- Dependencies: 217
 -- Name: User_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -588,7 +480,6 @@ SELECT pg_catalog.setval('public."User_id_seq"', 4022, true);
 
 
 --
--- TOC entry 2892 (class 2606 OID 17690)
 -- Name: author author_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -597,7 +488,6 @@ ALTER TABLE ONLY public.author
 
 
 --
--- TOC entry 2895 (class 2606 OID 17692)
 -- Name: book book_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -606,7 +496,6 @@ ALTER TABLE ONLY public.book
 
 
 --
--- TOC entry 2899 (class 2606 OID 17696)
 -- Name: borrow borrow_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -615,7 +504,6 @@ ALTER TABLE ONLY public.borrow
 
 
 --
--- TOC entry 2902 (class 2606 OID 17698)
 -- Name: category category_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -624,7 +512,6 @@ ALTER TABLE ONLY public.category
 
 
 --
--- TOC entry 2905 (class 2606 OID 17700)
 -- Name: publisher publishing_house_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -633,7 +520,6 @@ ALTER TABLE ONLY public.publisher
 
 
 --
--- TOC entry 2908 (class 2606 OID 17702)
 -- Name: tag tag_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -642,7 +528,6 @@ ALTER TABLE ONLY public.tag
 
 
 --
--- TOC entry 2897 (class 2606 OID 17748)
 -- Name: book_tag unique_book_id; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -651,7 +536,6 @@ ALTER TABLE ONLY public.book_tag
 
 
 --
--- TOC entry 2910 (class 2606 OID 17746)
 -- Name: user unique_email; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -660,7 +544,6 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- TOC entry 2913 (class 2606 OID 17704)
 -- Name: user user_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -669,7 +552,6 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- TOC entry 2893 (class 1259 OID 17705)
 -- Name: book_isbn_uindex; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -677,7 +559,6 @@ CREATE UNIQUE INDEX book_isbn_uindex ON public.book USING btree (isbn);
 
 
 --
--- TOC entry 2900 (class 1259 OID 17706)
 -- Name: category_name_uindex; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -685,7 +566,6 @@ CREATE UNIQUE INDEX category_name_uindex ON public.category USING btree (name);
 
 
 --
--- TOC entry 2903 (class 1259 OID 17707)
 -- Name: publishing_house_cnpj_uindex; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -693,7 +573,6 @@ CREATE UNIQUE INDEX publishing_house_cnpj_uindex ON public.publisher USING btree
 
 
 --
--- TOC entry 2906 (class 1259 OID 17708)
 -- Name: tag_name_uindex; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -701,7 +580,6 @@ CREATE UNIQUE INDEX tag_name_uindex ON public.tag USING btree (name);
 
 
 --
--- TOC entry 2911 (class 1259 OID 17709)
 -- Name: user_email_uindex; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -709,7 +587,6 @@ CREATE UNIQUE INDEX user_email_uindex ON public."user" USING btree (email);
 
 
 --
--- TOC entry 2914 (class 2606 OID 17710)
 -- Name: book book_author_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -718,7 +595,6 @@ ALTER TABLE ONLY public.book
 
 
 --
--- TOC entry 2915 (class 2606 OID 17715)
 -- Name: book book_category_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -727,7 +603,6 @@ ALTER TABLE ONLY public.book
 
 
 --
--- TOC entry 2916 (class 2606 OID 17720)
 -- Name: book book_publisher_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -736,7 +611,6 @@ ALTER TABLE ONLY public.book
 
 
 --
--- TOC entry 2917 (class 2606 OID 17725)
 -- Name: book_tag book_tag_book_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -745,7 +619,6 @@ ALTER TABLE ONLY public.book_tag
 
 
 --
--- TOC entry 2918 (class 2606 OID 17730)
 -- Name: book_tag book_tag_tag_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -754,7 +627,6 @@ ALTER TABLE ONLY public.book_tag
 
 
 --
--- TOC entry 2919 (class 2606 OID 17735)
 -- Name: borrow borrow_book_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -763,15 +635,12 @@ ALTER TABLE ONLY public.borrow
 
 
 --
--- TOC entry 2920 (class 2606 OID 17740)
 -- Name: borrow borrow_user_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.borrow
     ADD CONSTRAINT borrow_user_id_fk FOREIGN KEY (user_id) REFERENCES public."user"(id) ON DELETE CASCADE;
 
-
--- Completed on 2021-04-24 17:39:23 -03
 
 --
 -- PostgreSQL database dump complete
