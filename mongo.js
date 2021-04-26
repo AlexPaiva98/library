@@ -79,14 +79,14 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function generateDate() {
+function generateDate(startingYear, finalYear) {
     var date = new Date(
-        getRandomIntInclusive(2000, 2021),    /** Ano */
-        getRandomIntInclusive(0, 11),         /** Mês */
-        getRandomIntInclusive(1, 31),         /** Dia */
-        getRandomIntInclusive(0, 23),         /** Hora(s) */
-        getRandomIntInclusive(0, 59),         /** Minuto(s) */
-        getRandomIntInclusive(0, 59)          /** Segundo(s) */
+        getRandomIntInclusive(startingYear, finalYear),     /** Ano */
+        getRandomIntInclusive(0, 11),                       /** Mês */
+        getRandomIntInclusive(1, 31),                       /** Dia */
+        getRandomIntInclusive(0, 23),                       /** Hora(s) */
+        getRandomIntInclusive(0, 59),                       /** Minuto(s) */
+        getRandomIntInclusive(0, 59)                        /** Segundo(s) */
     );
     return date.toISOString();
 };
@@ -98,8 +98,8 @@ function generateBorrow() {
         let indexISBN = getRandomIntInclusive(0, borrowed.length - 1);
         array.push({
             isbn: borrowed[indexISBN],
-            initial_date: generateDate(),
-            final_date: null
+            initial_date: generateDate(2020, 2020),
+            final_date: generateDate(2021, 2021)
         });
         borrowed.splice(indexISBN, 1);
     }
